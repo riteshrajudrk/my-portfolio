@@ -117,3 +117,30 @@ scrollBottom.forEach((el)=>observer.observe(el));
 
 const scrollTop = document.querySelectorAll(".scroll-top");
 scrollTop.forEach((el)=>observer.observe(el));
+
+
+
+// ------------filter skill js-------
+const filterButtons = document.querySelectorAll('.filter-btn');
+const skillBars = document.querySelectorAll('.skill-bar');
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        // Remove active from all buttons
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        skillBars.forEach(bar => {
+            if (filter === 'all' || bar.dataset.category === filter) {
+                bar.style.display = 'block';
+                // Optional: animate width if not handled elsewhere
+                bar.querySelector('span').style.width = bar.dataset.percent + '%';
+            } else {
+                bar.style.display = 'none';
+                bar.querySelector('span').style.width = '0';
+            }
+        });
+    });
+});

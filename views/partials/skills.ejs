@@ -1,0 +1,99 @@
+<section id="skills" class="skills">
+  <div class="main-text scroll-scale">
+    <span>Technical and Professional</span>
+    <h2>My Skills</h2>
+  </div>
+
+  <div class="skill-main">
+
+    <!-- Technical Skills -->
+    <div class="skill-left">
+  <h3>Technical Skills</h3>
+
+  <!-- Filter Buttons -->
+  <div class="skill-filter">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="language">Languages</button>
+    <button class="filter-btn" data-filter="frontend">Frontend</button>
+    <button class="filter-btn" data-filter="backend">Backend</button>
+    <button class="filter-btn" data-filter="database">Database</button>
+    <button class="filter-btn" data-filter="tools">Tools</button>
+  </div>
+
+  <!-- ✅ Scrollable Wrapper -->
+  <div class="skill-scroll">
+    <div id="skill-list" class="skill-bar-container" 
+         style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+      <% technicalSkills.forEach(skill => { %>
+        <div class="skill-bar" 
+             data-category="<%= skill.category %>" 
+             data-percent="<%= skill.percent %>">
+          <div class="info">
+            <p><%= skill.name %></p>
+            <p><%= skill.percent %>%</p>
+          </div>
+          <div class="bar">
+            <span class="<%= skill.name.toLowerCase().replace(/[^a-z0-9]/g,'') %>"></span>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Professional Skills -->
+    <div class="skill-right scroll-scale">
+      <h3>Professional Skills</h3>
+      <div class="professional">
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="90"></div>
+          <div class="text">
+            <big>90%</big>
+            <small>Team Work</small>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="60"></div>
+          <div class="text">
+            <big>60%</big>
+            <small>Creativity</small>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="70"></div>
+          <div class="text">
+            <big>70%</big>
+            <small>Project Management</small>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="60"></div>
+          <div class="text">
+            <big>60%</big>
+            <small>Communication</small>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="75"></div>
+          <div class="text">
+            <big>75%</big>
+            <small>Problem-Solving</small>
+          </div>
+        </div>
+
+        <div class="box">
+          <div class="circle" data-dots="80" data-percent="65"></div>
+          <div class="text">
+            <big>65%</big>
+            <small>Leadership</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

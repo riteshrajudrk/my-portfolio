@@ -1,0 +1,37 @@
+<section id="portfolio" class="portfolio">
+  <div class="main-text scroll-scale">
+    <span>What I have done</span>
+    <h2>Latest Projects</h2>
+  </div>
+
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="filter-buttons scroll-scale">
+      <button class="button" data-filter="all">All</button>
+      <button class="button" data-filter=".fullstack">Full Stack</button>
+      <button class="button" data-filter=".game">Game</button>
+      <button class="button" data-filter=".webapp">Web App</button>
+    </div>
+
+    <!-- Portfolio Gallery -->
+    <div class="portfolio-gallery scroll-bottom">
+      <% projects.forEach(project => { %>
+        <div class="port-box mix <%= project.category %> ">
+          <div class="port-image">
+            <!-- ✅ Category Badge -->
+            <span class="port-category"><%=project.title %></span>
+            <img src="<%= project.image %>" alt="<%= project.title %>">
+          </div>
+          <div class="port-content">
+            <h3><%= project.title %></h3>
+            <p><%= project.description %></p>
+            <div class="links">
+              <a href="<%= project.github %>" target="_blank" class="btn">Get GitHub Repo</a>
+              <a href="<%= project.live %>" target="_blank" class="btn">Live Link</a>
+            </div>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
