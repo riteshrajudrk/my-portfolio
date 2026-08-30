@@ -61,7 +61,7 @@ const projects = [
   {
     title: "SkillBarter",
     category: "fullstack",
-    image: "/images/skillbarter.jpg",
+    image: "/images/skillBarter.jpg",
     description:
       "A MERN-based peer-to-peer skill exchange platform where users can connect, request skill swaps, and communicate through real-time messaging powered by Socket.IO.",
     github: "https://github.com/riteshrajudrk/SkillBarter.git",
