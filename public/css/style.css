@@ -320,7 +320,7 @@ section{
 
 .img-box img{
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     height: auto;
 }
 
@@ -346,6 +346,7 @@ section{
 }
 
 .about .image-about{
+    /* height: 200px; */
     text-align: center;
     position: relative;
 }
@@ -353,6 +354,7 @@ section{
 .about .image-about img{
     max-width: 400px;
     height: auto;
+    display: none;
 }
 
 .about-content span{

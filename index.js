@@ -38,48 +38,56 @@ app.post('/submit-form', (req, res) => {
   });
 });
 
+
 const projects = [
+  {
+    title: "SafePing",
+    category: "fullstack",
+    image: "/images/safeping.jpg",
+    description:
+      "A MERN-based geofenced safety automation platform with live location tracking, safe-zone detection, and automated SMS alerts using Twilio.",
+    github: "https://github.com/riteshrajudrk/SafePing.git",
+    live: "https://safepingfrontend.vercel.app/"
+  },
+  {
+    title: "Placementor",
+    category: "ai",
+    image: "/images/placementor.jpg",
+    description:
+      "An AI-powered placement readiness platform that analyzes coding performance, evaluates resumes using ATS analysis, conducts AI-powered mock interviews, and generates personalized learning roadmaps using Groq LLM APIs.",
+    github: "https://github.com/riteshrajudrk/PlaceMentor-AI.git",
+    live: "https://placementor-frontend-six.vercel.app/"
+  },
+  {
+    title: "SkillBarter",
+    category: "fullstack",
+    image: "/images/skillbarter.jpg",
+    description:
+      "A MERN-based peer-to-peer skill exchange platform where users can connect, request skill swaps, and communicate through real-time messaging powered by Socket.IO.",
+    github: "https://github.com/riteshrajudrk/SkillBarter.git",
+    live: "https://skill-barter-frontend-kappa.vercel.app"
+  },
   {
     title: "Mindverse Blog App",
     category: "fullstack",
-    image: "/images/mindverseProject.png",
-    description: "A full-stack blog app built with EJS, Express, MongoDB (Mongoose), HTML, CSS, and JavaScript.",
+    image: "/images/mindverse_new.jpg",
+    description:
+      "A full-stack blogging platform built with EJS, Express.js, MongoDB, Mongoose, HTML, CSS, and JavaScript.",
     github: "https://github.com/riteshrajudrk/mindverse.git",
     live: "https://mindverse-cshl.onrender.com/"
   },
   {
-    title: "Snake Game",
-    category: "game",
-    image: "/images/snakegameProject.jpeg",
-    description: "A classic snake game developed using Python's Turtle library.",
-    github: "https://github.com/riteshrajudrk/Snake-Game.git",
-    live: "https://github.com/riteshrajudrk/Snake-Game.git"
-  },
-  {
     title: "Music Player Web App",
     category: "webapp",
-    image: "/images/musicplayerProject.png",
-    description: "A music player web app built using HTML, CSS, and JavaScript.",
+    image: "/images/music_player.jpg",
+    description:
+      "A responsive music player web application built using HTML, CSS, and JavaScript.",
     github: "https://github.com/riteshrajudrk/basic-music-player.git",
     live: "https://basic-music-player.onrender.com"
-  },
-  {
-    title: "Text to Scanner",
-    category: "webapp",
-    image: "/images/texttoscannerProject.png",
-    description: "A simple web app that converts text to a QR code scanner using HTML, CSS, and JavaScript.",
-    github: "https://github.com/riteshrajudrk/Text-To-Scanner-Converter.git",
-    live: "https://text-to-scanner-converter.onrender.com"
-  },
-  {
-    title: "Weather App",
-    category: "webapp",
-    image: "/images/weatherProject.jpeg",
-    description: "A weather forecasting web app built using HTML, CSS, and JavaScript.",
-    github: "https://github.com/riteshrajudrk/basic-weather-app.git",
-    live: "https://basic-weather-app-pt3m.onrender.com"
   }
 ];
+
+
 
 
 
@@ -107,6 +115,7 @@ const technicalSkills = [
 
   // 🗄️ Database
   { name: "MongoDB", percent: 70, category: "database" },
+  { name: "SQL", percent: 75, category: "database" },
   { name: "Mongoose", percent: 65, category: "database" },
 
   // 🛠️ Tools & Deployment
